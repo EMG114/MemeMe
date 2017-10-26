@@ -10,6 +10,12 @@ import UIKit
 
 class MemeTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var memedImageView: UIView!
+    
+    @IBOutlet weak var bottomTextLabel: UILabel!
+    @IBOutlet weak var topTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
