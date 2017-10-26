@@ -64,19 +64,43 @@
 		07274E1F1FA1340D00B99424 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
+				07274E3E1FA17C5D00B99424 /* Model */,
 				07274E201FA1340D00B99424 /* AppDelegate.swift */,
-				07274E241FA1340D00B99424 /* Main.storyboard */,
-				07274E321FA1436000B99424 /* SentMemesCollectionViewController.swift */,
-				07274E3A1FA1619A00B99424 /* SentMemesTableViewController.swift */,
+				07274E341FA143EF00B99424 /* Meme.swift */,
 				07274E3C1FA16EEB00B99424 /* MemeTableViewCell.swift */,
 				07274E381FA146A100B99424 /* MemeCollectionViewCell.swift */,
-				07274E341FA143EF00B99424 /* Meme.swift */,
-				07274E351FA143F000B99424 /* MemeViewController.swift */,
-				07274E271FA1340D00B99424 /* Assets.xcassets */,
-				07274E291FA1340D00B99424 /* LaunchScreen.storyboard */,
 				07274E2C1FA1340D00B99424 /* Info.plist */,
+				07274E3F1FA17C7700B99424 /* View */,
+				07274E401FA17C8500B99424 /* Controller */,
 			);
 			path = MemeMe;
+			sourceTree = "<group>";
+		};
+		07274E3E1FA17C5D00B99424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07274E3F1FA17C7700B99424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07274E291FA1340D00B99424 /* LaunchScreen.storyboard */,
+				07274E241FA1340D00B99424 /* Main.storyboard */,
+				07274E271FA1340D00B99424 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07274E401FA17C8500B99424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07274E3A1FA1619A00B99424 /* SentMemesTableViewController.swift */,
+				07274E321FA1436000B99424 /* SentMemesCollectionViewController.swift */,
+				07274E351FA143F000B99424 /* MemeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
