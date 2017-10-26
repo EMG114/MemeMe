@@ -9,6 +9,7 @@
 import UIKit
 
 class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
     
      var memes: [Meme]!
     
@@ -19,11 +20,31 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
 
         // Do any additional setup after loading the view.
         
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        memes = appDelegate.memes
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
+        tableView.reloadData()
     }
+    
+
+
 
  
+    
+    
+    @IBAction func editMemeButton(_ sender: Any) {
+        
+        
+
+    }
+    
+    
     @IBAction func addNewMemeButton(_ sender: Any) {
         
         let newMemeViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
@@ -32,7 +53,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-         return memes.count
+         return self.memes.count
         
         
     }
@@ -43,14 +64,27 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         
         var meme = self.memes[(indexPath as NSIndexPath).row]
         
-//        tableCell.imageView?.image = meme.originalMeme
-//        tableCell.topTextLabel.text = meme.topText
-//        tableCell.bottomTextLabel.text = meme.bottomText
-//
+        tableCell.imageView?.image = meme.memedImage
+        tableCell.topTextLabel.text = meme.topText
+        tableCell.bottomTextLabel.text = meme.bottomText
+
         return tableCell
     }
     
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            memes.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 
     /*
     // MARK: - Navigation

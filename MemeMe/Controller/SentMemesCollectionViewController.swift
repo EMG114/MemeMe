@@ -8,7 +8,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
@@ -17,19 +16,30 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+       
 
         // Do any additional setup after loading the view.
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        memes = appDelegate.memes
         
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        collectionView?.reloadData()
+    }
+    
+    
+    
+    @IBAction func editMemeButton(_ sender: Any) {
+        
+       
+        
+    }
+    
     @IBAction func addNewMemeButton(_ sender: Any) {
         
         let newMemeViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
@@ -38,7 +48,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
     }
     
-
+  
     /*
     // MARK: - Navigation
 
@@ -53,7 +63,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
@@ -62,16 +72,20 @@ class SentMemesCollectionViewController: UICollectionViewController {
         return memes.count
     }
 
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)  as! MemeCollectionViewCell
+
+        
+        
+let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath)  as! MemeCollectionViewCell
         
          let meme = self.memes[(indexPath as NSIndexPath).row]
     
         // Configure the cell
         
-        cell.memeImageView.image = meme.originalMeme
-        cell.topText.text = meme.topText
-        cell.bottomText.text = meme.bottomText
+        cell.memeImageView.image = meme.memedImage
+       // cell.topText.text = meme.topText
+       // cell.bottomText.text = meme.bottomText
     
         return cell
         
