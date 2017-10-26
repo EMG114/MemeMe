@@ -30,7 +30,14 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
     }
 
-  
+    @IBAction func addNewMemeButton(_ sender: Any) {
+        
+        let newMemeViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
+        present(newMemeViewController, animated: true, completion: nil)
+        
+        
+    }
+    
 
     /*
     // MARK: - Navigation

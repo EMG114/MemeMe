@@ -24,6 +24,12 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     }
 
  
+    @IBAction func addNewMemeButton(_ sender: Any) {
+        
+        let newMemeViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
+        present(newMemeViewController, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
          return memes.count

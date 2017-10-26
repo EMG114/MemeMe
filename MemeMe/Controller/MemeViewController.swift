@@ -170,7 +170,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePickerView.image = nil
         prepareTextField(textField: textFieldTop, defaultText: "TOP")
         prepareTextField(textField: textFieldTop, defaultText: "BOTTOM")
-        
+        dismiss(animated: true, completion: nil)
+
+       
     }
     
     func pick(sourceType: UIImagePickerControllerSourceType){
