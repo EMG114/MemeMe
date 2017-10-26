@@ -123,6 +123,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func save(memedImage: UIImage) {
         // Create the meme
         let meme = Meme(topText: textFieldTop.text!, bottomText: textFieldBottom.text!, originalMeme: imagePickerView.image!, memedImage: memedImage)
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func generateMemedImage() -> UIImage {
