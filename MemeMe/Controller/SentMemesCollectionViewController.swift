@@ -11,12 +11,15 @@ import UIKit
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
+     @IBOutlet weak var removeAllButton: UIBarButtonItem!
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     var memes: [Meme]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
        
         let space:CGFloat = 3.0
         let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
@@ -29,27 +32,44 @@ class SentMemesCollectionViewController: UICollectionViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
+        removeAllButton.isEnabled = false
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
         collectionView?.reloadData()
+        
+        if appDelegate.memes.count > 0 {
+            removeAllButton.isEnabled = true
+        }
     }
     
-    
+   
     
     @IBAction func removeAllMemeButton(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Delete All", message: "This will DELETE ALL Memes", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Remove All?", message: "Do you want to DELETE ALL memes?", preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
+            
+            let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.memes.removeAll()
+            self.memes.removeAll()
+            self.collectionView?.reloadData()
+            
+        }
+        alertController.addAction(OKAction)
         
-        present(alertController, animated: true, completion: nil)
+        // Create Cancel button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+            print("Cancel button tapped");
+        }
+        alertController.addAction(cancelAction)
         
-        let object = UIApplication.shared.delegate
-        let appDelegate = object as! AppDelegate
-        appDelegate.memes.removeAll()
-        memes.removeAll()
-        collectionView?.reloadData()
+        // Present Dialog message
+        self.present(alertController, animated: true, completion:nil)
+        
+        
         
     }
     

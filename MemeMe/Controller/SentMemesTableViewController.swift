@@ -11,14 +11,15 @@ import UIKit
 class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-     var memes: [Meme]!
+    @IBOutlet weak var removeAllButton: UIBarButtonItem!
+    var memes: [Meme]!
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        removeAllButton.isEnabled = false
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100.0
        
@@ -26,22 +27,43 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewWillAppear(_ animated: Bool) {
+      // removeAllButton.isEnabled = false
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
         tableView.reloadData()
+        
+        if appDelegate.memes.count > 0 {
+            removeAllButton.isEnabled = true
+        }
     }
     
     
     
     @IBAction func removeAllMemeButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Remove All?", message: "Do you want to DELETE ALL memes?", preferredStyle: .alert)
         
-       // let alertV
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
+       
+            let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.memes.removeAll()
+            self.memes.removeAll()
+            self.tableView.reloadData()
+            
+        }
+         alertController.addAction(OKAction)
         
-        let object = UIApplication.shared.delegate
-        let appDelegate = object as! AppDelegate
-        appDelegate.memes.removeAll()
-        memes.removeAll()
-        tableView.reloadData()
+        // Create Cancel button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+            print("Cancel button tapped");
+        }
+        alertController.addAction(cancelAction)
+        
+        // Present Dialog message
+        self.present(alertController, animated: true, completion:nil)
+        
+    
         
     }
     

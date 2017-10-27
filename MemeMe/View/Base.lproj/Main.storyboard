@@ -39,16 +39,12 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-NK-fUG">
                                                     <rect key="frame" x="100" y="40" width="51.5" height="22"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottomText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-Gk-90T">
                                                     <rect key="frame" x="235.5" y="40" width="78.5" height="22"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -100,6 +96,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="removeAllButton" destination="TN5-GS-5Zd" id="o8H-Ou-C5v"/>
                         <outlet property="tableView" destination="ak6-Ij-fkr" id="zdW-qq-wyp"/>
                     </connections>
                 </viewController>
@@ -193,6 +190,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="BXQ-0S-oU3" id="3fK-aU-SSK"/>
+                        <outlet property="removeAllButton" destination="chE-A6-9aZ" id="xOL-WH-x5r"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXM-QZ-fSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
