@@ -17,6 +17,8 @@ class MasterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editMemeButton))
 
         // Do any additional setup after loading the view.
     }
@@ -26,4 +28,17 @@ class MasterDetailViewController: UIViewController {
         detailImage.image = image
     }
 
+    @objc func editMemeButton() {
+        
+//        if editingStyle == .delete
+//        {
+//            memes.remove(at: indexPath.row)
+//            tableView.reloadData()
+//        }
+//        
+        
+        
+    }
+    
+    
 }

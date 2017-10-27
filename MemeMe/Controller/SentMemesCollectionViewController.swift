@@ -11,12 +11,19 @@ import UIKit
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
+    
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     var memes: [Meme]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
        
+        let space:CGFloat = 3.0
+        let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
+        let heightDimension = (view.frame.size.height - (2 * space)) / 3.0
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: widthDimension, height: heightDimension)
         
     }
 
@@ -31,8 +38,18 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     @IBAction func removeAllMemeButton(_ sender: Any) {
         
-       memes.removeAll()
-       collectionView?.reloadData()
+        let alertController = UIAlertController(title: "Delete All", message: "This will DELETE ALL Memes", preferredStyle: .actionSheet)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.removeAll()
+        memes.removeAll()
+        collectionView?.reloadData()
         
     }
     

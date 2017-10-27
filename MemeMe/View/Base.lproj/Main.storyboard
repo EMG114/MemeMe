@@ -151,7 +151,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="90" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-Ri-X0i">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-Ri-X0i">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="79"/>
                                         </imageView>
                                     </subviews>
@@ -184,6 +184,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="BXQ-0S-oU3" id="3fK-aU-SSK"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXM-QZ-fSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

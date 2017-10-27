@@ -35,6 +35,11 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func removeAllMemeButton(_ sender: Any) {
         
+       // let alertV
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.removeAll()
         memes.removeAll()
         tableView.reloadData()
         

@@ -32,7 +32,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+     
+        
+    shareActionButton.isEnabled = false
     textFieldTop.delegate = self
     textFieldBottom.delegate = self
         
