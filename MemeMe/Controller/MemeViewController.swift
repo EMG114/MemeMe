@@ -10,11 +10,11 @@ import UIKit
 
 class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    let memeTextAttributes:[String:Any] = [
-        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedStringKey.strokeWidth.rawValue: -1]
+//    let memeTextAttributes:[String:Any] = [
+//        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+//        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+//        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+//        NSAttributedStringKey.strokeWidth.rawValue: -1]
 
 
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -60,10 +60,13 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func prepareTextField(textField: UITextField, defaultText: String) {
        
         textFieldTop.text = "TOP"
+        //textFieldTop.font?.withSize(40.0)
         textFieldBottom.text = "BOTTOM "
-        
-        textFieldTop.defaultTextAttributes = memeTextAttributes
-        textFieldBottom.defaultTextAttributes = memeTextAttributes
+         //textFieldBottom.font?.withSize(40.0)
+        textFieldTop.textColor = UIColor.white
+        textFieldBottom.textColor = UIColor.white
+       // textFieldTop.defaultTextAttributes = memeTextAttributes
+       // textFieldBottom.defaultTextAttributes = memeTextAttributes
         textFieldTop.textAlignment = NSTextAlignment.center
         textFieldBottom.textAlignment = NSTextAlignment.center
         

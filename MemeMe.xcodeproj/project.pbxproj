@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		071EACF91FA2ACE3009EB46D /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EACF81FA2ACE3009EB46D /* MasterDetailViewController.swift */; };
+		071FF1161FA3B4660091A2DA /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 071FF1151FA3B4660091A2DA /* impact.ttf */; };
 		07274E211FA1340D00B99424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07274E201FA1340D00B99424 /* AppDelegate.swift */; };
 		07274E261FA1340D00B99424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07274E241FA1340D00B99424 /* Main.storyboard */; };
 		07274E281FA1340D00B99424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07274E271FA1340D00B99424 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		071EACF81FA2ACE3009EB46D /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
+		071FF1151FA3B4660091A2DA /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 		07274E1D1FA1340D00B99424 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07274E201FA1340D00B99424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07274E251FA1340D00B99424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071FF1141FA3AE720091A2DA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				071FF1151FA3B4660091A2DA /* impact.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		07274E141FA1340D00B99424 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 				07274E291FA1340D00B99424 /* LaunchScreen.storyboard */,
 				07274E241FA1340D00B99424 /* Main.storyboard */,
 				07274E271FA1340D00B99424 /* Assets.xcassets */,
+				071FF1141FA3AE720091A2DA /* Font */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071FF1161FA3B4660091A2DA /* impact.ttf in Resources */,
 				07274E2B1FA1340D00B99424 /* LaunchScreen.storyboard in Resources */,
 				07274E281FA1340D00B99424 /* Assets.xcassets in Resources */,
 				07274E261FA1340D00B99424 /* Main.storyboard in Resources */,
