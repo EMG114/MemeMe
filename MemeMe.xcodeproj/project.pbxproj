@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071EACF91FA2ACE3009EB46D /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EACF81FA2ACE3009EB46D /* MasterDetailViewController.swift */; };
 		07274E211FA1340D00B99424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07274E201FA1340D00B99424 /* AppDelegate.swift */; };
 		07274E261FA1340D00B99424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07274E241FA1340D00B99424 /* Main.storyboard */; };
 		07274E281FA1340D00B99424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07274E271FA1340D00B99424 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071EACF81FA2ACE3009EB46D /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
 		07274E1D1FA1340D00B99424 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07274E201FA1340D00B99424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07274E251FA1340D00B99424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				07274E3A1FA1619A00B99424 /* SentMemesTableViewController.swift */,
 				07274E321FA1436000B99424 /* SentMemesCollectionViewController.swift */,
 				07274E351FA143F000B99424 /* MemeViewController.swift */,
+				071EACF81FA2ACE3009EB46D /* MasterDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			files = (
 				07274E391FA146A100B99424 /* MemeCollectionViewCell.swift in Sources */,
 				07274E3B1FA1619A00B99424 /* SentMemesTableViewController.swift in Sources */,
+				071EACF91FA2ACE3009EB46D /* MasterDetailViewController.swift in Sources */,
 				07274E361FA143F000B99424 /* Meme.swift in Sources */,
 				07274E331FA1436000B99424 /* SentMemesCollectionViewController.swift in Sources */,
 				07274E3D1FA16EEB00B99424 /* MemeTableViewCell.swift in Sources */,

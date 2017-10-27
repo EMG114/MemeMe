@@ -85,6 +85,16 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
             tableView.reloadData()
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailController = storyboard!.instantiateViewController(withIdentifier: "MasterDetailViewController") as! MasterDetailViewController
+        
+        detailController.detailImage = memes[indexPath.row]
+        
+        navigationController!.pushViewController(detailController, animated: true)
+    }
 
     /*
     // MARK: - Navigation
