@@ -12,7 +12,8 @@ class MasterDetailViewController: UIViewController {
 
     @IBOutlet weak var detailImage: UIImageView!
     
-    var memes: [Meme]!
+    var image: UIImage!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class MasterDetailViewController: UIViewController {
 
     //MARK: Override Functions
     override func viewWillAppear(_ animated: Bool) {
-       // detailImage.image = 
+        detailImage.image = image
     }
 
 }

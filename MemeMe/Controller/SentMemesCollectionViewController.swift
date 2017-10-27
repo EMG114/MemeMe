@@ -17,11 +17,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
        
-
-        // Do any additional setup after loading the view.
-        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        memes = appDelegate.memes
         
     }
 
@@ -49,15 +44,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -84,26 +70,15 @@ let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollecti
         // Configure the cell
         
         cell.memeImageView.image = meme.memedImage
-       // cell.topText.text = meme.topText
-       // cell.bottomText.text = meme.bottomText
-    
+      
         return cell
         
     }
 
 
     
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
-        
-//        // Grab the DetailVC from Storyboard
-//        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
-//        
-//        //Populate view controller with data from the selected item
-//        detailController.villain = allVillains[(indexPath as NSIndexPath).row]
-//        
-//        // Present the view controller using navigation
-//        navigationController!.pushViewController(detailController, animated: true)
+
         
     }
  

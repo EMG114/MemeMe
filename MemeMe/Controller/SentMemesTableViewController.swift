@@ -18,11 +18,10 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        memes = appDelegate.memes
-        
+
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 90
+       
         
     }
     
@@ -32,10 +31,6 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         tableView.reloadData()
     }
     
-
-
-
- 
     
     
     @IBAction func editMemeButton(_ sender: Any) {
@@ -62,7 +57,9 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell") as! MemeTableViewCell
         
-        var meme = self.memes[(indexPath as NSIndexPath).row]
+       var meme = self.memes[(indexPath as NSIndexPath).row]
+        
+       
         
         tableCell.imageView?.image = meme.memedImage
         tableCell.topTextLabel.text = meme.topText
@@ -89,21 +86,16 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let detailController = storyboard!.instantiateViewController(withIdentifier: "MasterDetailViewController") as! MasterDetailViewController
+        let detailController = storyboard!.instantiateViewController(withIdentifier: "MasterDetail") as! MasterDetailViewController
         
-        detailController.detailImage = memes[indexPath.row]
+       detailController.image = memes[indexPath.row].memedImage
         
         navigationController!.pushViewController(detailController, animated: true)
     }
 
-    /*
-    // MARK: - Navigation
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        return 75.0
     }
-    */
 
 }
