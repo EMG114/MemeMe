@@ -20,7 +20,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
 
 
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 90
+        tableView.estimatedRowHeight = 100.0
        
         
     }
@@ -33,10 +33,11 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
-    @IBAction func editMemeButton(_ sender: Any) {
+    @IBAction func removeAllMemeButton(_ sender: Any) {
         
+        memes.removeAll()
+        tableView.reloadData()
         
-
     }
     
     
@@ -93,9 +94,11 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         navigationController!.pushViewController(detailController, animated: true)
     }
 
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
-        return 75.0
+        return 100.0
     }
 
 }

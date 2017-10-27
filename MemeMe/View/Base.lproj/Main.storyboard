@@ -22,40 +22,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="memeTableCell" rowHeight="90" id="PuB-HZ-RSE" customClass="MemeTableViewCell" customModule="MemeMe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="memeTableCell" rowHeight="100" id="PuB-HZ-RSE" customClass="MemeTableViewCell" customModule="MemeMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PuB-HZ-RSE" id="MPg-Ds-XCi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wc8-XN-QTn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="99.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-NK-fUG">
-                                                    <rect key="frame" x="116" y="40" width="56" height="11.5"/>
+                                                    <rect key="frame" x="116" y="40" width="56" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottomText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-Gk-90T">
-                                                    <rect key="frame" x="256" y="40" width="91" height="11.5"/>
+                                                    <rect key="frame" x="256" y="40" width="91" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="Xq6-Gk-90T" secondAttribute="top" id="0ey-mc-axd"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="3Cu-KT-QSQ"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="32" id="4jD-YL-emN"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="aG5-NK-fUG" secondAttribute="centerY" id="D9e-5p-I7w"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="20" id="LAh-EY-Uwy"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="MPg-Ds-XCi" secondAttribute="centerY" id="SOC-36-xdl"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="16" id="U83-Io-9Wg"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="hZz-S3-lGP"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="baseline" secondItem="Xq6-Gk-90T" secondAttribute="baseline" id="ocA-gM-IiN"/>
-                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" secondItem="aG5-NK-fUG" secondAttribute="trailing" constant="84" id="ylo-Ba-zmU"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="baseline" secondItem="Xq6-Gk-90T" secondAttribute="baseline" id="0IV-N4-kgV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="20" id="1d5-4U-W9x"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="SJd-DH-oBv"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="MPg-Ds-XCi" secondAttribute="centerY" id="Spa-Rh-DBv"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="Xq6-Gk-90T" secondAttribute="top" id="fAj-iL-QDx"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" secondItem="aG5-NK-fUG" secondAttribute="trailing" constant="84" id="jsR-gy-TZm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aG5-NK-fUG" secondAttribute="bottom" constant="29.5" id="sBK-cQ-J9L"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="txC-U7-P8O"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="32" id="woT-D3-O51"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="16" id="yWz-UM-LFz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -81,9 +81,9 @@
                         <viewLayoutGuide key="safeArea" id="KH2-yR-kuk"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oaj-Wb-PfP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="TN5-GS-5Zd">
+                        <barButtonItem key="leftBarButtonItem" title="Remove All" id="TN5-GS-5Zd">
                             <connections>
-                                <action selector="editMemeButton:" destination="ek8-cG-sF3" id="YqE-vd-w0r"/>
+                                <action selector="removeAllMemeButton:" destination="ek8-cG-sF3" id="Qdd-SO-TBs"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iIQ-lI-2Ng">
@@ -173,9 +173,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="tdz-QR-uXX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="chE-A6-9aZ">
+                        <barButtonItem key="leftBarButtonItem" title="Remove All" id="chE-A6-9aZ">
                             <connections>
-                                <action selector="editMemeButton:" destination="jT6-kL-feQ" id="hO3-1Y-nxC"/>
+                                <action selector="removeAllMemeButton:" destination="jT6-kL-feQ" id="V9Z-Mx-DEK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bpx-zP-RkB">

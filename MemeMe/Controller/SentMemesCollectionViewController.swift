@@ -29,9 +29,10 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     
     
-    @IBAction func editMemeButton(_ sender: Any) {
+    @IBAction func removeAllMemeButton(_ sender: Any) {
         
-       
+       memes.removeAll()
+       collectionView?.reloadData()
         
     }
     
@@ -78,6 +79,12 @@ let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollecti
 
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
+        
+        let detailController = storyboard!.instantiateViewController(withIdentifier: "MasterDetail") as! MasterDetailViewController
+        
+        detailController.image = memes[indexPath.row].memedImage
+        
+        navigationController!.pushViewController(detailController, animated: true)
 
         
     }
