@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,30 +36,30 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wc8-XN-QTn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-NK-fUG">
-                                                    <rect key="frame" x="100" y="40" width="51.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottomText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-Gk-90T">
+                                                    <rect key="frame" x="236" y="40" width="79" height="22"/>
                                                     <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottomText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-Gk-90T">
-                                                    <rect key="frame" x="235.5" y="40" width="78.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-NK-fUG">
+                                                    <rect key="frame" x="128" y="41" width="52" height="22"/>
                                                     <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="baseline" secondItem="Xq6-Gk-90T" secondAttribute="baseline" id="0IV-N4-kgV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="20" id="1d5-4U-W9x"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="SJd-DH-oBv"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="MPg-Ds-XCi" secondAttribute="centerY" id="Spa-Rh-DBv"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="Xq6-Gk-90T" secondAttribute="top" id="fAj-iL-QDx"/>
-                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" secondItem="aG5-NK-fUG" secondAttribute="trailing" constant="84" id="jsR-gy-TZm"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aG5-NK-fUG" secondAttribute="bottom" constant="29.5" id="sBK-cQ-J9L"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="txC-U7-P8O"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="32" id="woT-D3-O51"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="16" id="yWz-UM-LFz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="19" id="8r6-HG-vWY"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="Bsg-cb-3tZ"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" secondItem="aG5-NK-fUG" secondAttribute="trailing" constant="56" id="EuH-ZK-p0k"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="LeL-7K-WMj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aG5-NK-fUG" secondAttribute="bottom" constant="28.5" id="bT6-ff-UOK"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="28" id="cyS-hF-Jrc"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="MPg-Ds-XCi" secondAttribute="centerY" id="dea-O4-9nc"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="baseline" secondItem="aG5-NK-fUG" secondAttribute="firstBaseline" id="uzp-Vk-g2B"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="33" id="w2f-cQ-3jI"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="32" id="zVL-Gv-Dwe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

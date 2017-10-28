@@ -9,16 +9,10 @@
 import UIKit
 
 class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-//    let memeTextAttributes:[String:Any] = [
-//        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
-//        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-//        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-//        NSAttributedStringKey.strokeWidth.rawValue: -1]
-
-
+    
+    
     @IBOutlet weak var imagePickerView: UIImageView!
-
+    
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
@@ -32,14 +26,14 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         
-    shareActionButton.isEnabled = false
-    textFieldTop.delegate = self
-    textFieldBottom.delegate = self
         
-    prepareTextField(textField: textFieldTop, defaultText:"TOP")
-    prepareTextField(textField: textFieldBottom, defaultText:"BOTTOM")
+        shareActionButton.isEnabled = false
+        textFieldTop.delegate = self
+        textFieldBottom.delegate = self
+        
+        prepareTextField(textField: textFieldTop, defaultText:"TOP")
+        prepareTextField(textField: textFieldBottom, defaultText:"BOTTOM")
         
     }
     
@@ -49,7 +43,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         subscribeToKeyboardNotifications()
         cameraButton.isEnabled = false
-   
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,15 +52,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func prepareTextField(textField: UITextField, defaultText: String) {
-       
+        
         textFieldTop.text = "TOP"
-        //textFieldTop.font?.withSize(40.0)
         textFieldBottom.text = "BOTTOM "
-         //textFieldBottom.font?.withSize(40.0)
         textFieldTop.textColor = UIColor.white
         textFieldBottom.textColor = UIColor.white
-       // textFieldTop.defaultTextAttributes = memeTextAttributes
-       // textFieldBottom.defaultTextAttributes = memeTextAttributes
         textFieldTop.textAlignment = NSTextAlignment.center
         textFieldBottom.textAlignment = NSTextAlignment.center
         
@@ -75,12 +65,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @objc func keyboardWillShow(_ notification:Notification) {
         if textFieldBottom.isEditing {
+            
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
         
-        view.frame.origin.y = -getKeyboardHeight(notification)
     }
-        
-    }
-        
+    
     @objc func keyboardWillHide(_ notification:Notification) {
         view.frame.origin.y = 0
     }
@@ -103,7 +93,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         
-          NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
@@ -176,8 +166,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         prepareTextField(textField: textFieldTop, defaultText: "TOP")
         prepareTextField(textField: textFieldTop, defaultText: "BOTTOM")
         dismiss(animated: true, completion: nil)
-
-       
+        
+        
     }
     
     func pick(sourceType: UIImagePickerControllerSourceType){
@@ -188,13 +178,13 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func pickAnImage(_ sender: Any) {
         
-       pick(sourceType: .photoLibrary)
-            
-        }
-
+        pick(sourceType: .photoLibrary)
+        
+    }
+    
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
         
-         pick(sourceType: .camera)
+        pick(sourceType: .camera)
     }
 }
 
@@ -210,16 +200,16 @@ extension MemeViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
+        
         if textField.isFirstResponder {
             textField.resignFirstResponder()
-    }
+        }
         return true
     }
     
 }
-    
-    
+
+
 
 
 

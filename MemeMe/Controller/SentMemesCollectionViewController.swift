@@ -11,16 +11,14 @@ import UIKit
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
-     @IBOutlet weak var removeAllButton: UIBarButtonItem!
+    @IBOutlet weak var removeAllButton: UIBarButtonItem!
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     var memes: [Meme]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-       
         let space:CGFloat = 3.0
         let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
         let heightDimension = (view.frame.size.height - (2 * space)) / 3.0
@@ -29,9 +27,10 @@ class SentMemesCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSize(width: widthDimension, height: heightDimension)
         
     }
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
+        
         removeAllButton.isEnabled = false
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
@@ -42,7 +41,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         }
     }
     
-   
+    
     
     @IBAction func removeAllMemeButton(_ sender: Any) {
         
@@ -66,10 +65,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         }
         alertController.addAction(cancelAction)
         
-        // Present Dialog message
         self.present(alertController, animated: true, completion:nil)
-        
-        
         
     }
     
@@ -81,39 +77,38 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
     }
     
-  
-
+    
+    
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+        
         return memes.count
     }
-
+    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         
         
-let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath)  as! MemeCollectionViewCell
         
-         let meme = self.memes[(indexPath as NSIndexPath).row]
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath)  as! MemeCollectionViewCell
+        
+        let meme = self.memes[(indexPath as NSIndexPath).row]
+        
         // Configure the cell
         
         cell.memeImageView.image = meme.memedImage
-      
+        
         return cell
         
     }
-
-
+    
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
@@ -122,10 +117,9 @@ let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollecti
         detailController.image = memes[indexPath.row].memedImage
         
         navigationController!.pushViewController(detailController, animated: true)
-
+        
         
     }
- 
     
-
+    
 }
