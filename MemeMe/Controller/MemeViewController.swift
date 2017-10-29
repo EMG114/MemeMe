@@ -31,7 +31,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var textFieldBottom: UITextField!
     
-    
+    let topText = "TOP"
+    let bottomText = "BOTTOM"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textFieldTop.delegate = self
         textFieldBottom.delegate = self
         
-        prepareTextField(textField: textFieldTop, defaultText:"TOP")
-        prepareTextField(textField: textFieldBottom, defaultText:"BOTTOM")
+        configureTextFields(textField: textFieldTop, text: topText)
+        configureTextFields(textField: textFieldBottom, text: bottomText)
         
     }
     
@@ -60,17 +61,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         unsubscribeFromKeyboardNotifications()
     }
     
-    func prepareTextField(textField: UITextField, defaultText: String) {
-        
-        textFieldTop.text = "TOP"
-        textFieldBottom.text = "BOTTOM "
-        textFieldTop.defaultTextAttributes = memeTextAttributes
-        textFieldBottom.defaultTextAttributes = memeTextAttributes
-        textFieldTop.textAlignment = NSTextAlignment.center
-        textFieldBottom.textAlignment = NSTextAlignment.center
-       
-        
-        
+    
+    
+    func configureTextFields(textField: UITextField, text: String!){
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.text = text
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
@@ -135,11 +131,18 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         appDelegate.memes.append(meme)
     }
     
+    func configureNavBarAndToolbar (isHidden: Bool) {
+        memeToolBar.isHidden = isHidden
+        memeNavigationBar.isHidden = isHidden
+    }
+    
+    
+    
     func generateMemedImage() -> UIImage {
         
         // TODO: Hide toolbar and navbar
-        self.memeToolBar.isHidden = true
-        self.memeNavigationBar.isHidden = true
+        configureNavBarAndToolbar(isHidden: true)
+        
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
@@ -148,8 +151,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // TODO: Show toolbar and navbar
         
-        self.memeToolBar.isHidden = false
-        self.memeNavigationBar.isHidden = false
+        configureNavBarAndToolbar(isHidden: false)
         
         return memedImage
     }
@@ -173,8 +175,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         shareActionButton.isEnabled = false
         imagePickerView.image = nil
-        prepareTextField(textField: textFieldTop, defaultText: "TOP")
-        prepareTextField(textField: textFieldTop, defaultText: "BOTTOM")
+        configureTextFields(textField: textFieldTop, text: "TOP")
+        configureTextFields(textField: textFieldBottom, text: "BOTTOM")
         dismiss(animated: true, completion: nil)
         
         

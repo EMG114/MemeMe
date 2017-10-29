@@ -9,6 +9,7 @@
 import UIKit
 
 class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -79,13 +80,15 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell") as! MemeTableViewCell
         
-        var meme = self.memes[(indexPath as NSIndexPath).row]
+        let meme = self.memes[(indexPath as NSIndexPath).row]
+      
+//        tableCell.imageView?.image = meme.memedImage
+//        tableCell.topTextLabel.text = meme.topText
+//        tableCell.bottomTextLabel.text = meme.bottomText
         
-        tableCell.imageView?.image = meme.memedImage
-        tableCell.topTextLabel.text = meme.topText
-        tableCell.bottomTextLabel.text = meme.bottomText
+         tableCell.setupCellWith(meme: meme)
         
-        return tableCell
+         return tableCell
     }
     
     

@@ -12,6 +12,7 @@ class MemeTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var memedImageView: UIImageView!
+    
     @IBOutlet weak var bottomTextLabel: UILabel!
     @IBOutlet weak var topTextLabel: UILabel!
     
@@ -20,6 +21,14 @@ class MemeTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    func setupCellWith(meme:Meme) {
+        
+        memedImageView.image = meme.memedImage
+        bottomTextLabel.text = meme.bottomText
+        topTextLabel.text = meme.topText
+        
+}
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
