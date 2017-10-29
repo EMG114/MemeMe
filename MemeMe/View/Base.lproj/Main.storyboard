@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,16 +49,18 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="19" id="8r6-HG-vWY"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="Bsg-cb-3tZ"/>
-                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" secondItem="aG5-NK-fUG" secondAttribute="trailing" constant="56" id="EuH-ZK-p0k"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="LeL-7K-WMj"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aG5-NK-fUG" secondAttribute="bottom" constant="28.5" id="bT6-ff-UOK"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="28" id="cyS-hF-Jrc"/>
-                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="centerY" secondItem="MPg-Ds-XCi" secondAttribute="centerY" id="dea-O4-9nc"/>
-                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="baseline" secondItem="aG5-NK-fUG" secondAttribute="firstBaseline" id="uzp-Vk-g2B"/>
-                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="33" id="w2f-cQ-3jI"/>
-                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="topMargin" constant="32" id="zVL-Gv-Dwe"/>
+                                                <constraint firstItem="aG5-NK-fUG" firstAttribute="leading" secondItem="Wc8-XN-QTn" secondAttribute="trailing" constant="28" id="5XQ-M3-r5Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xq6-Gk-90T" secondAttribute="trailing" constant="27" id="IDL-Pm-ZzT"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="leading" secondItem="MPg-Ds-XCi" secondAttribute="leading" id="Ler-pg-8so"/>
+                                                <constraint firstAttribute="bottom" secondItem="aG5-NK-fUG" secondAttribute="bottom" constant="36.5" id="MtI-H1-UJo"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="top" secondItem="MPg-Ds-XCi" secondAttribute="top" id="UKS-Ox-MaX"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="baseline" secondItem="aG5-NK-fUG" secondAttribute="firstBaseline" id="YJE-Iz-B6Z"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="width" secondItem="MPg-Ds-XCi" secondAttribute="width" constant="-242" id="eT0-PM-WBj"/>
+                                                <constraint firstItem="Wc8-XN-QTn" firstAttribute="height" secondItem="MPg-Ds-XCi" secondAttribute="height" id="jlg-rs-yAC"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aG5-NK-fUG" secondAttribute="trailing" symbolic="YES" id="ldg-Jq-dvH"/>
+                                                <constraint firstItem="Xq6-Gk-90T" firstAttribute="top" secondItem="aG5-NK-fUG" secondAttribute="top" constant="-1" id="ohA-HS-bAx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xq6-Gk-90T" secondAttribute="bottom" constant="37.5" id="wmN-3R-o9D"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wc8-XN-QTn" secondAttribute="bottom" constant="-0.5" id="zjd-vw-Qd5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

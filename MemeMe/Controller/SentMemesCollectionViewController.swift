@@ -56,6 +56,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
             self.memes.removeAll()
             self.collectionView?.reloadData()
             
+            
         }
         alertController.addAction(OKAction)
         

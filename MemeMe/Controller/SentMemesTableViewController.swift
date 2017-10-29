@@ -9,14 +9,14 @@
 import UIKit
 
 class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var removeAllButton: UIBarButtonItem!
     var memes: [Meme]!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,14 +81,11 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell") as! MemeTableViewCell
         
         let meme = self.memes[(indexPath as NSIndexPath).row]
-      
-//        tableCell.imageView?.image = meme.memedImage
-//        tableCell.topTextLabel.text = meme.topText
-//        tableCell.bottomTextLabel.text = meme.bottomText
         
-         tableCell.setupCellWith(meme: meme)
         
-         return tableCell
+        tableCell.setupCellWith(meme: meme)
+        
+        return tableCell
     }
     
     
