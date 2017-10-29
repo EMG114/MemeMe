@@ -283,13 +283,13 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rI8-dt-50a">
-                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zR-Ha-TqC">
                                 <rect key="frame" x="0.0" y="538" width="375" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ect-Mg-3kH"/>
+                                    <constraint firstAttribute="height" constant="40" id="6q4-W7-qnA"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
@@ -316,7 +316,7 @@
                                 <rect key="frame" x="0.0" y="107" width="375" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="CDO-aa-ylV"/>
+                                    <constraint firstAttribute="height" constant="40" id="C8a-fx-xTY"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
@@ -325,22 +325,22 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7Xu-gf-nfn" secondAttribute="trailing" id="0F5-s1-zSU"/>
-                            <constraint firstItem="bEA-XT-auX" firstAttribute="top" secondItem="7Xu-gf-nfn" secondAttribute="bottom" constant="43" id="3Mo-wg-tGu"/>
-                            <constraint firstItem="rI8-dt-50a" firstAttribute="top" secondItem="7Xu-gf-nfn" secondAttribute="bottom" id="7Hf-sg-OQF"/>
-                            <constraint firstItem="rI8-dt-50a" firstAttribute="trailing" secondItem="9zR-Ha-TqC" secondAttribute="trailing" id="Gnn-LY-9tJ"/>
-                            <constraint firstItem="9zR-Ha-TqC" firstAttribute="leading" secondItem="jhW-DS-3XJ" secondAttribute="leading" id="Jqx-02-qdw"/>
-                            <constraint firstItem="jhW-DS-3XJ" firstAttribute="bottom" secondItem="5lq-0l-me8" secondAttribute="bottom" id="O7m-9j-nld"/>
-                            <constraint firstItem="bEA-XT-auX" firstAttribute="leading" secondItem="9zR-Ha-TqC" secondAttribute="leading" id="Q89-70-hYB"/>
-                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="leading" secondItem="bEA-XT-auX" secondAttribute="leading" id="R0u-sU-uvD"/>
-                            <constraint firstItem="jhW-DS-3XJ" firstAttribute="top" secondItem="9zR-Ha-TqC" secondAttribute="bottom" constant="45" id="VyU-BZ-9Qr"/>
-                            <constraint firstItem="9zR-Ha-TqC" firstAttribute="trailing" secondItem="jhW-DS-3XJ" secondAttribute="trailing" id="Y2F-Wh-r2r"/>
-                            <constraint firstItem="bEA-XT-auX" firstAttribute="trailing" secondItem="9zR-Ha-TqC" secondAttribute="trailing" id="fDc-MW-vKI"/>
-                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="trailing" secondItem="bEA-XT-auX" secondAttribute="trailing" id="fFp-NO-hG6"/>
-                            <constraint firstAttribute="bottom" secondItem="rI8-dt-50a" secondAttribute="bottom" constant="20" symbolic="YES" id="hd9-7j-96d"/>
-                            <constraint firstItem="rI8-dt-50a" firstAttribute="leading" secondItem="bEA-XT-auX" secondAttribute="leading" id="kEC-kp-RiO"/>
-                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="top" secondItem="5lq-0l-me8" secondAttribute="top" id="o2x-Ey-FwU"/>
-                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="leading" secondItem="xeL-JB-SmJ" secondAttribute="leading" id="snX-iJ-KCS"/>
+                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="top" secondItem="5lq-0l-me8" secondAttribute="top" id="1RT-yE-nE3"/>
+                            <constraint firstItem="bEA-XT-auX" firstAttribute="top" secondItem="7Xu-gf-nfn" secondAttribute="bottom" constant="43" id="9ZE-0i-Af3"/>
+                            <constraint firstItem="jhW-DS-3XJ" firstAttribute="top" secondItem="rI8-dt-50a" secondAttribute="bottom" id="Ce8-wA-QIz"/>
+                            <constraint firstAttribute="trailing" secondItem="7Xu-gf-nfn" secondAttribute="trailing" id="H8N-S3-qh5"/>
+                            <constraint firstItem="rI8-dt-50a" firstAttribute="leading" secondItem="bEA-XT-auX" secondAttribute="leading" id="JOs-cG-go0"/>
+                            <constraint firstItem="rI8-dt-50a" firstAttribute="top" secondItem="7Xu-gf-nfn" secondAttribute="bottom" id="QWS-si-h7g"/>
+                            <constraint firstItem="rI8-dt-50a" firstAttribute="trailing" secondItem="bEA-XT-auX" secondAttribute="trailing" id="Y81-So-iYw"/>
+                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="trailing" secondItem="bEA-XT-auX" secondAttribute="trailing" id="ZXn-f3-OKp"/>
+                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="leading" secondItem="bEA-XT-auX" secondAttribute="leading" id="Zam-8w-AP6"/>
+                            <constraint firstItem="jhW-DS-3XJ" firstAttribute="bottom" secondItem="5lq-0l-me8" secondAttribute="bottom" id="aTN-cB-vAd"/>
+                            <constraint firstItem="7Xu-gf-nfn" firstAttribute="leading" secondItem="xeL-JB-SmJ" secondAttribute="leading" id="bSU-cJ-zib"/>
+                            <constraint firstItem="9zR-Ha-TqC" firstAttribute="trailing" secondItem="jhW-DS-3XJ" secondAttribute="trailing" id="mi3-YI-RcM"/>
+                            <constraint firstItem="bEA-XT-auX" firstAttribute="leading" secondItem="9zR-Ha-TqC" secondAttribute="leading" id="rlu-Vk-9ds"/>
+                            <constraint firstItem="9zR-Ha-TqC" firstAttribute="leading" secondItem="jhW-DS-3XJ" secondAttribute="leading" id="tYj-JG-VKy"/>
+                            <constraint firstItem="jhW-DS-3XJ" firstAttribute="top" secondItem="9zR-Ha-TqC" secondAttribute="bottom" constant="45" id="u9U-aT-GBA"/>
+                            <constraint firstItem="bEA-XT-auX" firstAttribute="trailing" secondItem="9zR-Ha-TqC" secondAttribute="trailing" id="xax-LI-KKj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5lq-0l-me8"/>
                     </view>
@@ -349,6 +349,8 @@
                         <outlet property="cameraButton" destination="j7t-Xd-qZn" id="ge2-9j-7uJ"/>
                         <outlet property="cancelToolBarButton" destination="zUo-3Z-c2V" id="B7C-3Z-A9C"/>
                         <outlet property="imagePickerView" destination="rI8-dt-50a" id="Bq7-rl-A7h"/>
+                        <outlet property="memeNavigationBar" destination="7Xu-gf-nfn" id="4kB-04-0xx"/>
+                        <outlet property="memeToolBar" destination="jhW-DS-3XJ" id="I2n-KM-K4V"/>
                         <outlet property="shareActionButton" destination="DNO-Di-kAt" id="Ipn-MH-JQL"/>
                         <outlet property="textFieldBottom" destination="9zR-Ha-TqC" id="CTF-yr-WyP"/>
                         <outlet property="textFieldTop" destination="bEA-XT-auX" id="BQw-NR-vQG"/>

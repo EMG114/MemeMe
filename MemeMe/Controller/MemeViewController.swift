@@ -16,7 +16,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSAttributedStringKey.font.rawValue: UIFont(name: "Impact", size: 40)!,
         NSAttributedStringKey.strokeWidth.rawValue: -6]
     
+    @IBOutlet weak var memeNavigationBar: UINavigationBar!
     
+    @IBOutlet weak var memeToolBar: UIToolbar!
     
     @IBOutlet weak var imagePickerView: UIImageView!
     
@@ -136,9 +138,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func generateMemedImage() -> UIImage {
         
         // TODO: Hide toolbar and navbar
-        self.navigationController?.toolbar.isHidden = true
-        self.navigationController?.navigationBar.isHidden = true
-        
+        self.memeToolBar.isHidden = true
+        self.memeNavigationBar.isHidden = true
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
@@ -146,8 +147,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         UIGraphicsEndImageContext()
         
         // TODO: Show toolbar and navbar
-        self.navigationController?.toolbar.isHidden = false
-        self.navigationController?.navigationBar.isHidden = false
+        
+        self.memeToolBar.isHidden = false
+        self.memeNavigationBar.isHidden = false
         
         return memedImage
     }
