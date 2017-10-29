@@ -10,6 +10,13 @@ import UIKit
 
 class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let memeTextAttributes:[String:Any] = [
+        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+        NSAttributedStringKey.font.rawValue: UIFont(name: "Impact", size: 40)!,
+        NSAttributedStringKey.strokeWidth.rawValue: -6]
+    
+    
     
     @IBOutlet weak var imagePickerView: UIImageView!
     
@@ -55,10 +62,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         textFieldTop.text = "TOP"
         textFieldBottom.text = "BOTTOM "
-        textFieldTop.textColor = UIColor.white
-        textFieldBottom.textColor = UIColor.white
+        textFieldTop.defaultTextAttributes = memeTextAttributes
+        textFieldBottom.defaultTextAttributes = memeTextAttributes
         textFieldTop.textAlignment = NSTextAlignment.center
         textFieldBottom.textAlignment = NSTextAlignment.center
+       
         
         
     }
