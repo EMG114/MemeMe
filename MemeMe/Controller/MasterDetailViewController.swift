@@ -24,6 +24,7 @@ class MasterDetailViewController: UIViewController {
     //MARK: Override Functions
     override func viewWillAppear(_ animated: Bool) {
         detailImage.image = image
+        
     }
     
 }
